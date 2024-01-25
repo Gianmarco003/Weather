@@ -48,13 +48,7 @@ struct ContentView: View {
                                    temperature: 23)
                 }
                 Spacer()
-                Button("Change location"){
-                    print("Tapped")
-                }
-                    .frame(width: 280, height: 50)
-                    .background(Color.white)
-                    .font(.system(size: 20, weight: .bold))
-                    .cornerRadius(10)
+                WeatherButton(text: "Change day time", textColor: .blue, backgroundColor: .white)
                 Spacer()
             }
         }
