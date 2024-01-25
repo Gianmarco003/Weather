@@ -8,19 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var isNight = false
+    
     var body: some View {
         ZStack{
-            LinearGradient(gradient: Gradient(colors: [.blue, Color("lightBlue")]),
-                           startPoint: .topLeading, 
-                           endPoint: .bottomTrailing)
-                .edgesIgnoringSafeArea(.all)
+            backgorundView(isNight: $isNight)
             VStack(){
                 Text("Cupertino, CA")
                     .font(.system(.title))
                     .foregroundColor(.white)
                     .padding(32)
                 VStack(spacing: 10){
-                    Image(systemName: "cloud.sun.fill")
+                    Image(systemName: isNight ? "moon.fill" : "cloud.sun.fill")
                         .renderingMode(.original)
                         .resizable()
                         .aspectRatio(contentMode: .fill)
@@ -48,7 +47,14 @@ struct ContentView: View {
                                    temperature: 23)
                 }
                 Spacer()
-                WeatherButton(text: "Change day time", textColor: .blue, backgroundColor: .white)
+                Button("Change time zone"){
+                        isNight.toggle()
+                    }
+                    .frame(width: 280, height: 50)
+                    .background(.white)
+                    .foregroundColor(.blue)
+                    .font(.system(size: 20, weight: .bold))
+                    .cornerRadius(10)
                 Spacer()
             }
         }
@@ -80,5 +86,16 @@ struct weatherDayView: View {
                 .font(.system(size: 28, weight: .medium))
                 .foregroundColor(.white)
         }
+    }
+}
+
+struct backgorundView: View {
+    @Binding var isNight: Bool
+    
+    var body: some View {
+        LinearGradient(gradient: Gradient(colors: [isNight ? .black : .blue, isNight ? .gray : Color("lightBlue")]),
+                       startPoint: .topLeading,
+                       endPoint: .bottomTrailing)
+        .ignoresSafeArea(.all)
     }
 }
