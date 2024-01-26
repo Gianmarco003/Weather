@@ -12,7 +12,7 @@ struct ContentView: View {
     
     var body: some View {
         ZStack{
-//            backgorundView(isNight: $isNight)
+            backgorundView(isNight: $isNight)
             VStack(){
                 Text("Cupertino, CA")
                     .font(.system(.title))
@@ -77,7 +77,7 @@ struct weatherDayView: View {
                 .font(.system(size: 16, weight: .medium))
                 .foregroundColor(.white)
             Image(systemName: weatherIcon)
-//                .symbolRenderingMode(.multicolor)
+                .symbolRenderingMode(.multicolor)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 40, height: 40)
@@ -88,10 +88,10 @@ struct weatherDayView: View {
     }
 }
 
-//struct backgorundView: View {
-//    @Binding var isNight: Bool
+struct backgorundView: View {
+    @Binding var isNight: Bool
     
-//    var body: some View {
+    var body: some View {
 //        Complex gradient color
 //        LinearGradient(gradient: Gradient(colors: [isNight ? .black : .blue,
 //                                                   isNight ? .gray : Color("lightBlue")]),
@@ -100,8 +100,8 @@ struct weatherDayView: View {
 //        .ignoresSafeArea(.all)
 //
 //        Simple gradient color 
-//        ContainerRelativeShape()
-//            .fill(isNight ? Color.black.gradient : Color.blue.gradient)
-//            .ignoresSafeArea()
-//    }
-//}
+        ContainerRelativeShape()
+            .fill(isNight ? Color.black.gradient : Color.blue.gradient)
+            .ignoresSafeArea()
+    }
+}
