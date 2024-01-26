@@ -47,14 +47,13 @@ struct ContentView: View {
                                    temperature: 23)
                 }
                 Spacer()
-                Button("Change time zone"){
-                        isNight.toggle()
-                    }
-                    .frame(width: 280, height: 50)
-                    .background(.white)
-                    .foregroundColor(.blue)
-                    .font(.system(size: 20, weight: .bold))
-                    .cornerRadius(10)
+                Button {
+                    isNight.toggle()
+                } label: {
+                    weatherButtonView(text: "Change day time",
+                                      backgroundColor: .white,
+                                      textColor: .blue)
+                }
                 Spacer()
             }
         }
@@ -78,7 +77,7 @@ struct weatherDayView: View {
                 .font(.system(size: 16, weight: .medium))
                 .foregroundColor(.white)
             Image(systemName: weatherIcon)
-                .renderingMode(.original)
+                .symbolRenderingMode(.multicolor)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 40, height: 40)
@@ -93,9 +92,16 @@ struct backgorundView: View {
     @Binding var isNight: Bool
     
     var body: some View {
-        LinearGradient(gradient: Gradient(colors: [isNight ? .black : .blue, isNight ? .gray : Color("lightBlue")]),
-                       startPoint: .topLeading,
-                       endPoint: .bottomTrailing)
-        .ignoresSafeArea(.all)
+//        Complex gradient color
+//        LinearGradient(gradient: Gradient(colors: [isNight ? .black : .blue,
+//                                                   isNight ? .gray : Color("lightBlue")]),
+//                       startPoint: .topLeading,
+//                       endPoint: .bottomTrailing)
+//        .ignoresSafeArea(.all)
+//
+//        Simple gradient color 
+        ContainerRelativeShape()
+            .fill(isNight ? Color.black.gradient : Color.blue.gradient)
+            .ignoresSafeArea()
     }
 }

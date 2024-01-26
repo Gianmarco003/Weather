@@ -11,7 +11,8 @@
 		1B8282292B602FD6007BBC99 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8282282B602FD6007BBC99 /* ContentView.swift */; };
 		1B82822B2B602FD8007BBC99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B82822A2B602FD8007BBC99 /* Assets.xcassets */; };
 		1B82822F2B602FD8007BBC99 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B82822E2B602FD8007BBC99 /* Preview Assets.xcassets */; };
-		1B88A5892B6320EB00D0713B /* WeatherButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B88A5882B6320EB00D0713B /* WeatherButton.swift */; };
+		1B8508722B646FCD00D4F627 /* weatherButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8508712B646FCD00D4F627 /* weatherButtonView.swift */; };
+		1B8508762B64762200D4F627 /* Schermata.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B8508752B64762200D4F627 /* Schermata.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,7 +23,8 @@
 		1B82822A2B602FD8007BBC99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B82822C2B602FD8007BBC99 /* Weather.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Weather.entitlements; sourceTree = "<group>"; };
 		1B82822E2B602FD8007BBC99 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		1B88A5882B6320EB00D0713B /* WeatherButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherButton.swift; sourceTree = "<group>"; };
+		1B8508712B646FCD00D4F627 /* weatherButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weatherButtonView.swift; sourceTree = "<group>"; };
+		1B8508752B64762200D4F627 /* Schermata.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Schermata.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +42,7 @@
 			isa = PBXGroup;
 			children = (
 				1B2831292B606C830087196E /* README.md */,
+				1B8508752B64762200D4F627 /* Schermata.png */,
 				1B8282252B602FD6007BBC99 /* Weather */,
 				1B8282242B602FD6007BBC99 /* Products */,
 			);
@@ -58,7 +61,7 @@
 			children = (
 				1B8282262B602FD6007BBC99 /* WeatherApp.swift */,
 				1B8282282B602FD6007BBC99 /* ContentView.swift */,
-				1B88A5882B6320EB00D0713B /* WeatherButton.swift */,
+				1B8508712B646FCD00D4F627 /* weatherButtonView.swift */,
 				1B82822A2B602FD8007BBC99 /* Assets.xcassets */,
 				1B82822C2B602FD8007BBC99 /* Weather.entitlements */,
 				1B82822D2B602FD8007BBC99 /* Preview Content */,
@@ -90,6 +93,8 @@
 			dependencies = (
 			);
 			name = Weather;
+			packageProductDependencies = (
+			);
 			productName = Weather;
 			productReference = 1B8282232B602FD6007BBC99 /* Weather.app */;
 			productType = "com.apple.product-type.application";
@@ -118,6 +123,8 @@
 				Base,
 			);
 			mainGroup = 1B82821A2B602FD6007BBC99;
+			packageReferences = (
+			);
 			productRefGroup = 1B8282242B602FD6007BBC99 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -133,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B82822F2B602FD8007BBC99 /* Preview Assets.xcassets in Resources */,
+				1B8508762B64762200D4F627 /* Schermata.png in Resources */,
 				1B82822B2B602FD8007BBC99 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,9 +152,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B8508722B646FCD00D4F627 /* weatherButtonView.swift in Sources */,
 				1B8282292B602FD6007BBC99 /* ContentView.swift in Sources */,
 				1B8282272B602FD6007BBC99 /* WeatherApp.swift in Sources */,
-				1B88A5892B6320EB00D0713B /* WeatherButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,10 +298,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 12.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = bottle.Weather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -329,10 +337,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 12.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = bottle.Weather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
