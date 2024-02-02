@@ -8,4 +8,4 @@ The project consists in developing the UI of the main page of a wheather app.
 I'm studying SwiftUI thanks to this [video](https://youtu.be/b1oC7sLIgpI?si=rbQqJavLBTJpxdya)
 
 ## Preview
-![alt text](Schermata.png "Schermata")
+![alt text](Light.png "Schermata") ![alt text](Dark.png "Schermata")
